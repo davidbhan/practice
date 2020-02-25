@@ -1,4 +1,4 @@
-# Runtime: 0.14288115501403809 seconds
+# Runtime: 0.10146212577819824 seconds
 # Evaluate the sum of all the amicable numbers under 10000.
 import time
 start = time.time()

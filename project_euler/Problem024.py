@@ -1,4 +1,4 @@
-# Runtime: 0.0008020401000976562 seconds
+# Runtime: 0.0005557537078857422 seconds
 # What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?
 import time
 start = time.time()

@@ -1,4 +1,4 @@
-# Runtime: 0.002048015594482422 seconds
+# Runtime: 0.00127410888671875 seconds
 # If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would be used?
 import time
 start = time.time()

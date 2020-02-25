@@ -1,4 +1,4 @@
-# Runtime: 1.8835067749023438e-05 seconds
+# Runtime: 2.09808349609375e-05 seconds
 # Find sum of even fibonacci numbers less than 4 million
 import time
 start = time.time()

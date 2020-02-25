@@ -1,4 +1,4 @@
-# Runtime: 0.3105180263519287 seconds
+# Runtime: 0.21012401580810547 seconds
 # Find the value of the first triangle number to have over five hundred divisors
 import time
 start = time.time()

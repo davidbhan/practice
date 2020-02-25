@@ -1,4 +1,4 @@
-# Runtime: 0.007211923599243164 seconds
+# Runtime: 0.004930257797241211 seconds
 # Find the greatest product of thirteen adjacent digits in the 1000-digit number
 import time
 start = time.time()

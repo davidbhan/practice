@@ -1,4 +1,4 @@
-# Runtime: 0.0026102066040039062 seconds
+# Runtime: 0.0024061203002929688 seconds
 # In a given 2D array, find the maximum value of four adjacent numbers in a straight line (row, column, or diagonal)
 import time
 start = time.time()

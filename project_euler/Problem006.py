@@ -1,4 +1,4 @@
-# Runtime: 6.008148193359375e-05 seconds
+# Runtime: 4.410743713378906e-05 seconds
 # Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum
 import time
 start = time.time()

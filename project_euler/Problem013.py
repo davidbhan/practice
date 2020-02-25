@@ -1,4 +1,4 @@
-# Runtime: 0.00045299530029296875 seconds
+# Runtime: 0.0003848075866699219 seconds
 # Find the first ten digits of the sum of the one-hundred 50-digit numbers.
 import time
 start = time.time()

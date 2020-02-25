@@ -1,4 +1,4 @@
-# Runtime: 3.0285377502441406 seconds
+# Runtime: 2.104935884475708 seconds
 # Find the starting number, under one million, that produces the longest chain in Collatz Problem
 import time
 start = time.time()

@@ -1,4 +1,4 @@
-# Runtime: 0.0036728382110595703 seconds
+# Runtime: 0.003818035125732422 seconds
 # Finds largest prime factor of the number 600851475143
 import time
 start = time.time()

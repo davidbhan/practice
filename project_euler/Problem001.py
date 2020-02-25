@@ -1,4 +1,4 @@
-# Runtime: 0.0002238750457763672 seconds
+# Runtime: 0.000286102294921875 seconds
 # Sum all multiples of 3 or 5 below 1000
 import time
 start = time.time()

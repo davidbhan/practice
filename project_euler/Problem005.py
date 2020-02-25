@@ -1,4 +1,4 @@
-# Runtime: 9.989738464355469e-05 seconds
+# Runtime: 0.0001239776611328125 seconds
 # Find smallest positive number that is evenly divisible by all of the numbers from 1 to 20
 import time
 start = time.time()

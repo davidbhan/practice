@@ -1,4 +1,4 @@
-# Runtime: 0.0008299350738525391 seconds
+# Runtime: 0.0008287429809570312 seconds
 # Find the sum of the digits in the number 100!
 import time
 start = time.time()

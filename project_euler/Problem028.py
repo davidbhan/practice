@@ -1,4 +1,4 @@
-# Runtime: 0.0006279945373535156 seconds
+# Runtime: 0.0003561973571777344 seconds
 # What is the sum of the numbers on the diagonals in a 1001 by 1001 spiral?
 import time
 start = time.time()

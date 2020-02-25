@@ -1,4 +1,4 @@
-# Runtime: 0.0007798671722412109 seconds
+# Runtime: 0.0005891323089599609 seconds
 # Starting in the top left corner of a 20×20 grid, and only being able to move to the right and down, how many routes to the bottom right corner?
 import time
 start = time.time()

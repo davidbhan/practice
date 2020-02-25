@@ -1,4 +1,4 @@
-# Runtime: 2.3538339138031006 seconds
+# Runtime: 1.630795955657959 seconds
 # Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
 import time
 start = time.time()

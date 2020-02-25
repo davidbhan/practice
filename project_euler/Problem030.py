@@ -1,4 +1,4 @@
-# Runtime: 1.7624280452728271 seconds
+# Runtime: 1.281775951385498 seconds
 # Find the sum of all the numbers that can be written as the sum of fifth powers of their digits.
 import time
 start = time.time()

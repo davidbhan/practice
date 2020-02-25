@@ -1,4 +1,4 @@
-# Runtime: 0.03116607666015625 seconds
+# Runtime: 0.022864818572998047 seconds
 # What is the index of the first term in the Fibonacci sequence to contain 1000 digits?
 import time
 start = time.time()

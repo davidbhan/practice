@@ -1,4 +1,4 @@
-# Runtime: 7.877299070358276 seconds
+# Runtime: 5.51333212852478 seconds
 # Find the product of the coefficients, aa and bb, for the quadratic expression that produces the maximum number of primes for consecutive values of nn, starting with n=0n=0.
 import time
 start = time.time()

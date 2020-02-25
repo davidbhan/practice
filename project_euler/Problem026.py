@@ -1,4 +1,4 @@
-# Runtime: 0.038567304611206055 seconds
+# Runtime: 0.026377201080322266 seconds
 # Find the value of d < 1000 for which 1/d contains the longest recurring cycle in its decimal fraction part.
 import time
 start = time.time()

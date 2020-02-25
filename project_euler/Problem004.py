@@ -1,4 +1,4 @@
-# Runtime: 0.38826799392700195 seconds
+# Runtime: 0.25446486473083496 seconds
 # Finds the largest palindrome made from the product of two 3-digit numbers.
 import time
 start = time.time()

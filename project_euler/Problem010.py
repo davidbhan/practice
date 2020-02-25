@@ -1,4 +1,4 @@
-# Runtime: 1.32875394821167 seconds
+# Runtime: 0.9272933006286621 seconds
 # Find sum of all prime numbers below 2 million
 import time
 start = time.time()

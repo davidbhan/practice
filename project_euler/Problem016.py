@@ -1,4 +1,4 @@
-# Runtime: 0.00014328956604003906 seconds
+# Runtime: 0.00011491775512695312 seconds
 # What is the sum of the digits of the number 2^1000?
 import time
 start = time.time()

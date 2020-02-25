@@ -1,4 +1,4 @@
-# Runtime: 0.0005040168762207031 seconds
+# Runtime: 0.0003490447998046875 seconds
 # Find the maximum total from top to bottom of the triangle
 import time
 start = time.time()

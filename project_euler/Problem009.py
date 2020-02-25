@@ -1,4 +1,4 @@
-# Runtime: 0.10084986686706543 seconds
+# Runtime: 0.06825995445251465 seconds
 # There exists exactly one Pythagorean triplet for which a + b + c = 1000. Find the product abc
 import time
 start = time.time()

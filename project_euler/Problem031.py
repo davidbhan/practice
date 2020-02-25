@@ -1,4 +1,4 @@
-# Runtime: 0.00023794174194335938 seconds
+# Runtime: 0.0001342296600341797 seconds
 # How many different ways can £2 be made using any number of coins?
 import time
 start = time.time()

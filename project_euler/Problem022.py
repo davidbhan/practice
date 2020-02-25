@@ -1,4 +1,4 @@
-# Runtime: 0.010977745056152344 seconds
+# Runtime: 0.007093906402587891 seconds
 # What is the total of all the name scores in the file?
 import time
 start = time.time()

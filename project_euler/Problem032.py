@@ -1,4 +1,4 @@
-# Runtime: 0.00023794174194335938 seconds
+# Runtime: 0.44172096252441406 seconds
 # Find the sum of all products whose multiplicand/multiplier/product identity can be written as a 1 through 9 pandigital.
 import time
 start = time.time()

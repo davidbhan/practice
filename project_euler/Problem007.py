@@ -1,4 +1,4 @@
-# Runtime: 1.429785966873169 seconds
+# Runtime: 0.9184167385101318 seconds
 # Find the 10001st prime number
 import time
 start = time.time()

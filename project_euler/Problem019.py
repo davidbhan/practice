@@ -1,4 +1,4 @@
-# Runtime: 0.00036215782165527344 seconds
+# Runtime: 0.000244140625 seconds
 # How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?
 import time
 start = time.time()
