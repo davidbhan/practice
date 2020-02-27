@@ -1,10 +1,4 @@
 # https://www.hackerrank.com/challenges/botcleanlarge
-import sys
-def eprint(*args, **kwargs):
-    print(*args, file=sys.stderr, **kwargs)
-
-DEBUG = True
-
 def get_multiple_char_positions(num_rows, num_columns, grid, char = 'd'):
     positions =[]
     row, col = 0, 0
@@ -14,18 +8,12 @@ def get_multiple_char_positions(num_rows, num_columns, grid, char = 'd'):
             for c in range(0, num_columns):
                 if bot_line[c] == char:
                     positions.append( (r, c) )
-            
-    if DEBUG:
-        eprint(char + ' at:' + str(positions))
 
     return positions
 
 def compute_shift(src_r, src_c, dest_r, dest_c):
     shift_r = dest_r - src_r
     shift_c = dest_c - src_c
-    
-    if DEBUG:
-        eprint('shift required:' + str(shift_r) + ',' + str(shift_c))
     
     return shift_r, shift_c
 
@@ -64,13 +52,10 @@ def next_move(posx, posy, dimx, dimy, board):
     for r, c in positions:
         d_r, d_c = compute_shift(bot_row, bot_col, r, c)
         distance = abs(d_r) + abs(d_c)
-        if distance < closest_distance:
+        if distance <= closest_distance:
             closest_distance = distance
             next_r, next_c = r, c
             shift_r, shift_c = compute_shift(bot_row, bot_col, next_r, next_c)
-
-    if DEBUG:
-        eprint('closest pos:' + str(next_r) + ',' + str(next_c))
 
     directions = shift_to_human_readable(shift_r, shift_c)
     print(directions.partition('\n')[0])
