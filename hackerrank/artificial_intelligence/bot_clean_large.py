@@ -1,102 +1,82 @@
 # https://www.hackerrank.com/challenges/botcleanlarge
+import sys
+def eprint(*args, **kwargs):
+    print(*args, file=sys.stderr, **kwargs)
+
 DEBUG = True
 
-def get_multiple_char_positions(n, grid, char = 'd'):
+def get_multiple_char_positions(num_rows, num_columns, grid, char = 'd'):
     positions =[]
-    pos_x, pos_y = 0, 0
-    for r in range(0,n):
+    row, col = 0, 0
+    for r in range(0, num_rows):
         if char in grid[r]:
             bot_line = grid[r]
-            for c in range(0,n):
+            for c in range(0, num_columns):
                 if bot_line[c] == char:
-                    positions.append( (c, r) )
+                    positions.append( (r, c) )
             
     if DEBUG:
-        print(char + ' at:' + str(positions))
+        eprint(char + ' at:' + str(positions))
 
     return positions
 
-def compute_shift(src_x, src_y, dest_x, dest_y):
-    # positive shift for right and up
-    shift_x = dest_x - src_x
-    shift_y = src_y - dest_y
+def compute_shift(src_r, src_c, dest_r, dest_c):
+    shift_r = dest_r - src_r
+    shift_c = dest_c - src_c
     
     if DEBUG:
-        print('shift required:' + str(shift_x) + ',' + str(shift_y))
+        eprint('shift required:' + str(shift_r) + ',' + str(shift_c))
     
-    return shift_x, shift_y
+    return shift_r, shift_c
 
-def shift_to_human_readable(shift_x, shift_y):
+def shift_to_human_readable(shift_r, shift_c):
     output = ''
     
-    while(shift_x != 0):
-        if shift_x > 0:
+    while(shift_r != 0):
+        if shift_r > 0:
+            output += 'DOWN\n'
+            shift_r -= 1
+        else:
+            output += 'UP\n'
+            shift_r += 1
+            
+    while(shift_c != 0):
+        if shift_c > 0:
             output += 'RIGHT\n'
-            shift_x -= 1
+            shift_c -= 1
         else:
             output += 'LEFT\n'
-            shift_x += 1
-            
-    while(shift_y != 0):
-        if shift_y > 0:
-            output += 'UP\n'
-            shift_y -= 1
-        else:
-            output += 'DOWN\n'
-            shift_y += 1
+            shift_c += 1
     
     output += 'CLEAN\n'
 
     return output
 
-def next_move(posr, posc, board):
-    positions = get_multiple_char_positions(5, board, 'd')
-    m_x, m_y = posc, posr
+def next_move(posx, posy, dimx, dimy, board):
+    num_rows, num_columns = dimx, dimy
+    bot_row, bot_col = posx, posy
 
-    next_x, next_y = positions[0]
-    shift_x, shift_y = compute_shift(m_x, m_y, next_x, next_y)
-    closest_distance = abs(shift_x) + abs(shift_y)
-    for x, y in positions:
-        d_x, d_y = compute_shift(m_x, m_y, x, y)
-        distance = abs(d_x) + abs(d_y)
+    positions = get_multiple_char_positions(num_rows, num_columns, board, 'd')
+
+    next_r, next_c = positions[0]
+    shift_r, shift_c = compute_shift(bot_row, bot_col, next_r, next_c)
+    closest_distance = abs(shift_r) + abs(shift_c)
+    for r, c in positions:
+        d_r, d_c = compute_shift(bot_row, bot_col, r, c)
+        distance = abs(d_r) + abs(d_c)
         if distance < closest_distance:
             closest_distance = distance
-            next_x, next_y = x, y
-            shift_x, shift_y = compute_shift(m_x, m_y, next_x, next_y)
-
+            next_r, next_c = r, c
+            shift_r, shift_c = compute_shift(bot_row, bot_col, next_r, next_c)
 
     if DEBUG:
-        print('closest pos:' + str(next_x) + ',' + str(next_y))
+        eprint('closest pos:' + str(next_r) + ',' + str(next_c))
 
-    directions = shift_to_human_readable(shift_x, shift_y)
+    directions = shift_to_human_readable(shift_r, shift_c)
     print(directions.partition('\n')[0])
 
 if __name__ == "__main__":
-    pos = '''0 0'''
-    board0 = '''
-bd---
--d---
----d-
----d-
---d-d
-        '''
-
-    board1 = '''
-b--d-
-ddd--
------
------
-d-d--
-        '''
-
-    board2 = '''
-d---d
--d---
---dd-
---dd-
-dd--d
-        '''
-
-    pos = [int(i) for i in pos.strip().split()]
-    board = [j for j in board1.strip().split('\n')]
-    next_move(pos[0], pos[1], board)
+    pos = [int(i) for i in input().strip().split()]
+    dim = [int(i) for i in input().strip().split()]
+    board = [[j for j in input().strip()] for i in range(dim[0])]
+    next_move(pos[0], pos[1], dim[0], dim[1], board)
