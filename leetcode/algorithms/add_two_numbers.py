@@ -11,7 +11,7 @@ class Solution:
         if temp_sum > 9:
             temp_sum = temp_sum % 10
             new_carry = 1
-        return temp_sum ,new_carry
+        return temp_sum, new_carry
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         carry = 0
         temp_sum = 0
